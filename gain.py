@@ -172,5 +172,5 @@ def gain (data_x, gain_parameters):
   
   # Rounding
   imputed_data = rounding(imputed_data, data_x)  
-  np.save('/content/cloned-repo/data/tam_dolu_degisken.npy', imputed_data)        
+  np.save('/content/cloned-repo/data/imputed_data.npy', imputed_data)        
   return imputed_data
