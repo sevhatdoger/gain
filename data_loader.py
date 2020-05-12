@@ -35,5 +35,6 @@ def data_loader (data_name, miss_rate):
   data_m = binary_sampler(1-miss_rate, no, dim)
   miss_data_x = data_x.copy()
   miss_data_x[data_m == 0] = np.nan
-      
+  
+  np.save('miss_data_x', miss_data_x)
   return data_x, miss_data_x, data_m
