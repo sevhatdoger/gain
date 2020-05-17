@@ -24,6 +24,7 @@ def data_loader (data_name, miss_rate):
   if data_name in ['letter', 'spam','winequality-red']:
     file_name = 'data/'+data_name+'.csv'
     data_x = np.loadtxt(file_name, delimiter=",", skiprows=1)
+    data_x= data_x[:, :-1]
   elif data_name == 'mnist':
     (data_x, _), _ = mnist.load_data()
     data_x = np.reshape(np.asarray(data_x), [60000, 28*28]).astype(float)
